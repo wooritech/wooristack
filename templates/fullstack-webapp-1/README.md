@@ -2,7 +2,7 @@
 
 풀스탭 웹 애플리케이션을 빠르고 손쉽게 구성하기 위한 템플릿
 
-기반 기술: Typescript / Next.js / GraphQL / Prisma
+기반 기술: Typescript / Ant Design / Next.js / GraphQL / Prisma
 
 ## 특징
 
