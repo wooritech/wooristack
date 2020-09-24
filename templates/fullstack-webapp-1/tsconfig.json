@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    // Next.js 자동 설정
     "target": "es5",
     "lib": [
       "dom",
@@ -16,7 +17,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    // 커스텀 설정
+    // 경로 별칭: https://nextjs.org/docs/advanced-features/module-path-aliases
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "@components/*": ["components/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
