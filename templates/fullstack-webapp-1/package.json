@@ -9,9 +9,12 @@
     "infra-local:down": "run-s \"infra-local -- down\"",
     "infra-local:delete": "run-s \"infra-local -- down -v\"",
     "infra-local:ps": "run-s \"infra-local -- ps\"",
+    "db:migrate": "prisma migrate save --experimental && prisma migrate up --experimental",
+    "generate:prisma": "prisma generate",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "studio": "prisma studio --experimental",
     "analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
@@ -27,6 +30,8 @@
     "next": "^9.5.3",
     "next-compose-plugins": "^2.2.0",
     "nextjs-progressbar": "0.0.6",
+    "nexus": "^0.26.1",
+    "nexus-plugin-prisma": "^0.19.0",
     "null-loader": "^4.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
