@@ -4,6 +4,11 @@
   "description": "A template for fullstack webaap",
   "private": true,
   "scripts": {
+    "infra-local": "docker-compose -f infra/local/docker-compose.yml -p fullstack-webapp-1",
+    "infra-local:up": "run-s \"infra-local -- up -d\"",
+    "infra-local:down": "run-s \"infra-local -- down\"",
+    "infra-local:delete": "run-s \"infra-local -- down -v\"",
+    "infra-local:ps": "run-s \"infra-local -- ps\"",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
