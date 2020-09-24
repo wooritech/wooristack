@@ -21,7 +21,10 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    // eslint 적용할 js파일 목록
+    ".eslintrc.js",
+    "next.config.js",
   ],
   "exclude": [
     "node_modules"

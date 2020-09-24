@@ -1,0 +1,5 @@
+node_modules
+
+# 자동 생성 파일
+aws-exports.js
+src/generated/
