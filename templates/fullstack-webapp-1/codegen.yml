@@ -1,4 +1,4 @@
-# graphql-code-generator 설정 파일
+# graphql-code-generator 설정
 # - https://graphql-code-generator.com/docs/getting-started/codegen-config
 overwrite: true
 # TODO: dotenv와 next/env의 설정파일(.env)가 충돌나는 문제
