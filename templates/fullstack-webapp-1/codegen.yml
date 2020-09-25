@@ -1,0 +1,16 @@
+# graphql-code-generator 설정 파일
+# - https://graphql-code-generator.com/docs/getting-started/codegen-config
+overwrite: true
+# TODO: dotenv와 next/env의 설정파일(.env)가 충돌나는 문제
+# - https://graphql-code-generator.com/docs/getting-started/codegen-config/#environment-variables
+schema: "http://localhost:3000/api/graphql"
+documents: "src/graphql/operations/**/*.gql"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withHooks: true
+      withComponent: false
