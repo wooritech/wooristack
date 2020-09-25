@@ -11,8 +11,9 @@
     "infra-local:ps": "run-s \"infra-local -- ps\"",
     "db:migrate": "prisma migrate save --experimental && prisma migrate up --experimental",
     "generate:prisma": "prisma generate",
-    "dev": "next dev",
-    "build": "next build",
+    "dev:next": "next dev",
+    "dev:nexus": "nexus dev --reflection --entrypoint src/pages/api/graphql.ts",
+    "build": "nexus build && next build",
     "start": "next start",
     "studio": "prisma studio --experimental",
     "analyze": "ANALYZE=true npm run build"

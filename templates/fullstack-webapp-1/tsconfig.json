@@ -23,18 +23,28 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
-      "@components/*": ["components/*"]
-    }
+      "@components/*": ["components/*"],
+    },
+    // nexus
+    "rootDir": ".",
+    "plugins": [{ "name": "nexus/typescript-language-service" }],
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ],
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    // nexus
+    "types.d.ts",
     // eslint 적용할 js파일 목록
     ".eslintrc.js",
     "next.config.js",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "infra",
   ]
 }
