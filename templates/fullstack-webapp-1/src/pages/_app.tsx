@@ -4,6 +4,7 @@ import { ConfigProvider } from 'antd';
 import koKR from 'antd/lib/locale/ko_KR';
 import { ApolloProvider } from '@apollo/client';
 import { useApollo } from '../graphql/client';
+import '../styles/scss/global.scss';
 
 const AppWrapper: React.FC<{ pageProps: AppProps['pageProps'] }> = (props) => {
   const { pageProps, children } = props;

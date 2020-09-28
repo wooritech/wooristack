@@ -8,15 +8,17 @@ const fs = require('fs');
 const path = require('path');
 const withPlugins = require('next-compose-plugins');
 const lessToJS = require('less-vars-to-js');
+const withSass = require('@zeit/next-sass');
+const withLess = require('@zeit/next-less');
 
-const themeVariables = lessToJS(
-  fs.readFileSync(
-    path.resolve(__dirname, './src/styles/less/antd-theme-vars.less'),
-    'utf8'
-  )
+const antdThemeLess = fs.readFileSync(
+  path.resolve(__dirname, './src/styles/less/antd-theme.less'),
+  'utf8'
 );
+const antdThemeSass = antdThemeLess.replace(/\$/gi, '@');
+const themeVariables = lessToJS(antdThemeSass);
 
-const withLess = require('@zeit/next-less')({
+const nextConfig = {
   lessLoaderOptions: {
     javascriptEnabled: true,
     modifyVars: themeVariables,
@@ -44,14 +46,12 @@ const withLess = require('@zeit/next-less')({
     }
     return config;
   },
-});
+};
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+// TODO: withBundleAnalyzer 적용
+// const withBundleAnalyzer = require('@next/bundle-analyzer')({
+//   enabled: process.env.ANALYZE === 'true',
+// });
 
-module.exports = withPlugins([
-  // withPlugins 사용법: https://github.com/cyrilwanner/next-compose-plugins
-  [withBundleAnalyzer({})],
-  withLess,
-]);
+// withPlugins 사용법: https://github.com/cyrilwanner/next-compose-plugins
+module.exports = withPlugins([withSass, withLess], nextConfig);
