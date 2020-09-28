@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { LandingLayout } from '@components/layouts';
+import LandingLayout from '@components/layouts/LandingLayout';
 
 const LandingPage: NextPage = () => {
   return (

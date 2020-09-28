@@ -7,6 +7,7 @@ module.exports = {
   // airbnb-typescript-prettier 설정
   // - https://github.com/toshi-toma/eslint-config-airbnb-typescript-prettier/blob/master/index.js
   extends: ['airbnb-typescript-prettier'],
+  plugins: ['emotion'],
   rules: {
     // javascript
     'no-use-before-define': 'off', // 선언 전에 사용 허용
