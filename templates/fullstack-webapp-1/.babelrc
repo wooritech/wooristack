@@ -4,7 +4,7 @@
  * - https://nextjs.org/docs/advanced-features/customizing-babel-config
  */
 {
-  "presets": ["next/babel"],
+  "presets": ["next/babel", "@emotion/babel-preset-css-prop"],
   "plugins": [
     [
       "import",

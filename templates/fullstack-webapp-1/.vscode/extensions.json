@@ -4,15 +4,15 @@
       "dbaeumer.vscode-eslint",
       "mikestead.dotenv",
       "ms-azuretools.vscode-docker",
-  
+
       // Prisma
       "prisma.prisma",
 
       // Apollo
       "apollographql.vscode-apollo",
       
-      // Next.js
-      "blanu.vscode-styled-jsx",
-      "andrewrazumovsky.vscode-styled-jsx-languageserver"
+      // emotion.js
+      "jpoissonnier.vscode-styled-components",
+      "ijs.emotionsnippets"
     ]
   }

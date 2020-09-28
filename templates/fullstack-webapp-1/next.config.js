@@ -11,7 +11,7 @@ const lessToJS = require('less-vars-to-js');
 
 const themeVariables = lessToJS(
   fs.readFileSync(
-    path.resolve(__dirname, './src/themes/antd-custom.less'),
+    path.resolve(__dirname, './src/styles/less/antd-theme-vars.less'),
     'utf8'
   )
 );
@@ -19,7 +19,7 @@ const themeVariables = lessToJS(
 const withLess = require('@zeit/next-less')({
   lessLoaderOptions: {
     javascriptEnabled: true,
-    modifyVars: themeVariables, // make your antd custom effective
+    modifyVars: themeVariables,
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
