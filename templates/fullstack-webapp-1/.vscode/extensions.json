@@ -12,6 +12,7 @@
       "apollographql.vscode-apollo",
       
       // emotion.js
+      // - andrewrazumovsky.vscode-styled-jsx-languageserver 플러그인과 충돌나므로 삭제 필요
       "jpoissonnier.vscode-styled-components",
       "ijs.emotionsnippets"
     ]
