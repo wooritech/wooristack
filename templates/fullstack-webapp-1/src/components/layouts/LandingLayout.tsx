@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Row, Col, Button, Dropdown } from 'antd';
+import { Layout, Menu, Row, Col, Button, Dropdown, Typography } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import { css } from '@emotion/core';
 import Head from '@components/Head';
@@ -7,6 +7,7 @@ import Link from '@components/base/Link';
 import { BaseLayoutProps } from './types';
 
 const { Header, Content, Footer } = Layout;
+const { Title } = Typography;
 
 const headerStyle = css`
   position: fixed;
@@ -14,6 +15,9 @@ const headerStyle = css`
   width: 100%;
   background-color: white;
   box-shadow: 0 2px 8px #f0f1f2;
+`;
+const brandStyle = css`
+  margin-bottom: 0 !important;
 `;
 const headerNavStyle = css`
   margin-right: 64px;
@@ -63,11 +67,11 @@ const LandingLayout: React.FC<LandingLayoutProps> = (props) => {
       <Header css={headerStyle}>
         <Row align="middle">
           <Col xs={12} sm={12} md={4}>
-            {/* 로고 */}
+            {/* 브랜드 */}
             <Link href="/">
-              <Button type="link">
-                <h1>{process.env.NEXT_PUBLIC_APP_NAME}</h1>
-              </Button>
+              <Title css={brandStyle} level={4}>
+                {process.env.NEXT_PUBLIC_APP_NAME}
+              </Title>
             </Link>
           </Col>
 
@@ -86,7 +90,7 @@ const LandingLayout: React.FC<LandingLayoutProps> = (props) => {
 
               {/* 헤더 액션 */}
               <Col>
-                <Button size="middle">로그인</Button>
+                <Button>로그인</Button>
               </Col>
             </Row>
           </Col>

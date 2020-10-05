@@ -1,4 +1,3 @@
-import React from 'react';
 import { NextPage } from 'next';
 import { Button } from 'antd';
 import DatePicker from '@components/base/DatePicker';
