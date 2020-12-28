@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "nexus-prisma-typegen"
+    ],
+    "esModuleInterop": true
+  }
+}

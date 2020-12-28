@@ -1,0 +1,30 @@
+{
+  "name": "next-apollo-server-mongo",
+  "version": "0.1.0",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run build:nexus-typegen && next build",
+    "build:nexus-typegen": "ts-node --transpile-only -P nexus.tsconfig.json src/pages/api/graphql",
+    "start": "next start"
+  },
+  "dependencies": {
+    "apollo-server-micro": "^2.19.0",
+    "graphql": "^15.4.0",
+    "graphql-scalars": "^1.6.1",
+    "mongodb": "^3.6.3",
+    "next": "^10.0.3",
+    "nexus": "^1.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.6.3",
+    "@types/node": "^14.14.14",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
