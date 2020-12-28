@@ -17,8 +17,8 @@ $ npm run dev
 #### install
 
 ```sh
-$ npm install --save apollo-server-express graphql nexus next react react-dom graphql-scalars mongodb cors
-$ npm install --save-dev typescript ts-node @types/react @types/react-dom @types/node @types/mongodb @types/cors
+$ npm install --save apollo-server-express graphql nexus next react react-dom graphql-scalars mongodb
+$ npm install --save-dev typescript ts-node @types/react @types/react-dom @types/node @types/mongodb
 ```
 
 #### tsconfig.json
