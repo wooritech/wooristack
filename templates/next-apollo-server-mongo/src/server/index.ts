@@ -1,7 +1,6 @@
 import { ApolloServer } from 'apollo-server-micro';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { MongoClient, Db } from 'mongodb';
-import cors from 'cors';
 import schema from 'schema';
 
 let db: Db;
