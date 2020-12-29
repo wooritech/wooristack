@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "npm run build:nexus-typegen && next build",
-    "build:nexus-typegen": "ts-node --transpile-only -P nexus.tsconfig.json src/pages/api/graphql",
+    "build:nexus-typegen": "ts-node --transpile-only -r tsconfig-paths/register -P nexus.tsconfig.json src/pages/api/index.ts",
     "start": "next start"
   },
   "dependencies": {
