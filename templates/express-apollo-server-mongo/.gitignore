@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+yarn-error.log
+.DS_Store
+
+src/schema/generated
+

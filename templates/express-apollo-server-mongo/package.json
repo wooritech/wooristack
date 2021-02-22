@@ -1,0 +1,45 @@
+{
+  "name": "express-apollo-server-mongo",
+  "version": "1.0.0",
+  "description": "Wooritech WebStack Template",
+  "repository": "https://github.com/wooritech/webstack",
+  "author": "onlydel@wooritech.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server.ts",
+    "start": "node dist/server",
+    "clean": "rm -rf dist",
+    "build": "npm -s run clean && npm -s run generate && tsc",
+    "lint": "eslint src/**/**/*.ts tests/**/**/*.ts",
+    "test": "echo isgood",
+    "tsc": "tsc",
+    "generate": "ts-node --transpile-only src/schema",
+    "postinstall": "npm -s run generate"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.21.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "graphql-scalars": "^1.6.1",
+    "graphql-subscriptions": "^1.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.3",
+    "nexus": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/mongodb": "^3.6.3",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "ts-node-dev": "^1.0.0-pre.51",
+    "typescript": "^3.9.6"
+  }
+}
