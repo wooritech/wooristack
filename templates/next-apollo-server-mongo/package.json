@@ -1,7 +1,9 @@
 {
   "name": "next-apollo-server-mongo",
-  "version": "0.1.0",
-  "author": "",
+  "version": "1.0.0",
+  "description": "Wooritech WebStack Template",
+  "repository": "https://github.com/wooritech/webstack",
+  "author": "onlydel@wooritech.com",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

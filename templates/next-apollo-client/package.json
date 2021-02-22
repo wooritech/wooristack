@@ -1,9 +1,10 @@
 {
   "name": "nextjs-apollo-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wooritech WebStack Template",
+  "repository": "https://github.com/wooritech/webstack",
   "author": "onlydel@wooritech.com",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
