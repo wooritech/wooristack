@@ -1,6 +1,17 @@
-import PublicUser from 'components/PublicUser';
+import { setCookie } from 'nookies';
+
+import Repositories from 'components/Repositories';
 
 const IndexPage = () => {
+  /** 테스트를 위해 사용자 정보를 가져온것 처럼
+   * 쿠키유틸을 이용해 github access token을 넣어 준다.
+   * production에서는 로그인 같은 인증 처리가 필요하다. */
+  setCookie(
+    null,
+    'token',
+    process.env.NEXT_PUBLIC_GITHUB_PERSONAL_ACCESS_TOKEN
+  );
+
   return (
     <>
       <div className="bg-light p-5 rounded">
@@ -10,13 +21,18 @@ const IndexPage = () => {
           입니다.
         </p>
         <p>
-          소스코드는 우리테크 <mark>webstack 저장소</mark>에 있습니다. <br />이
-          템플릿은 RealDesk API에 로그인 하고 사용자 프로필을 가져오는 연습을
-          수행합니다. <br />
-          RealDesk에 사용자 계정이 없는 경우 새로운 계정을 등록 할 수 있습니다.
+          소스코드는 깃허브 저장소에서 정보를 가져오는 예제로 <br />
+          개발을 위해 루트 경로의 <code>.env</code> 파일에
+          <br />
+          NEXT_PUBLIC_GITHUB_PERSONAL_ACCESS_TOKEN 값을 지정하면 됩니다.
+          <br />
+          <a href="https://github.com/settings/tokens">
+            Personal access token{' '}
+          </a>
+          의 권한은 admin:org, notifications, repo, user 정도로 줍니다.
         </p>
         <div>
-          <PublicUser />
+          <Repositories />
         </div>
       </div>
     </>
